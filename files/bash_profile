@@ -4,7 +4,7 @@ export EDITOR=/usr/local/bin/atom
 export GIT_EDITOR=/usr/bin/vim
 
 export GECKODRIVER_HOME=~/development
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/usr/lib/java
 export M2_HOME=~/development/apache-maven-3.3.9
 export MONGO_HOME=/usr/local/mongodb
 export MYSQL_HOME=/usr/local/mysql
@@ -100,7 +100,7 @@ source ~/.rvm/scripts/rvm
 
 # NVM
 
-source /usr/local/opt/nvm/nvm.sh
+source "$NVM_DIR/nvm.sh"
 
 # PROMPT
 

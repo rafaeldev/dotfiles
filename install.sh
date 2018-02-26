@@ -44,7 +44,7 @@ job() {
 }
 
 linking() {
-  if [ `uname` == 'Linux' ]; then
+  if [ "$(uname)" == 'Linux' ]; then
     ENTRY='source ~/.bash_profile'
     FILE=~/.bashrc
     RESULT=$(grep "${ENTRY}" $FILE)
@@ -62,7 +62,7 @@ templates() {
 }
 
 terminal() {
-  [ `uname` != 'Linux' ] && open ./more/wbotelhos.terminal
+  [ `uname` != 'Linux' ] && open ./more/rafaeldev.terminal
 }
 
 ###################
