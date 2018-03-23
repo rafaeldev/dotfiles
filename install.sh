@@ -59,6 +59,8 @@ reload() {
 
 templates() {
   cp -R more/git-hooks ~/.git-hooks
+
+  chmod +x ~/.git-hooks/*
 }
 
 terminal() {

@@ -20,7 +20,7 @@
 	untracked = cyan
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [core]
 	excludesfile = ~/.gitignore
@@ -38,4 +38,3 @@
 [user]
 	email = rafael.dev@hotmail.com
 	name = Rafael Gomes Francisco
-	signingkey = 7C8E4AAB7B495219A3D977B431F0FBF65579C467
