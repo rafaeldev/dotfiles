@@ -15,6 +15,7 @@ export RVM_HOME=~/.rvm
 export TOMCAT_HOME=/usr/local/tomcat
 export LOCAL=~/.local
 export GPG_TTY="tty"
+export DOCKERID="rafaeldev"
 
 export PATH=${PATH}:${GECKODRIVER_HOME}:${JAVA_HOME}/bin:${MONGO_HOME}/bin:${MYSQL_HOME}/bin:${REDIS_HOME}/src:${TOMCAT_HOME}/bin:${RVM_HOME}/bin:${POSTGRES_HOME}/bin:${M2_HOME}/bin:${LOCAL}/bin
 
@@ -36,6 +37,7 @@ alias hclear='history -c'
 alias hide_files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
 alias ip='curl ifconfig.me'
 alias kill='kill -9'
+alias killport='kill -9 $(lsof -i tcp:$1 -t)'
 alias killnautilus='killall -9 nautilus'
 alias la='ls -lah'
 alias ll='ls -l'
