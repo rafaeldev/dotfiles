@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby-rvm-env ruby
 
 diff = `git diff --cached spec`
 
@@ -10,6 +10,6 @@ end
 
 if diff =~ /(debugger|biding.pry)/
   puts "\e[31mRemove debuggers before committing :)"
-  
+
   exit 2
 end

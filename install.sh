@@ -44,7 +44,7 @@ job() {
 }
 
 linking() {
-  if [ `uname` == 'Linux' ]; then
+  if [ "$(uname)" == 'Linux' ]; then
     ENTRY='source ~/.bash_profile'
     FILE=~/.bashrc
     RESULT=$(grep "${ENTRY}" $FILE)
@@ -59,10 +59,12 @@ reload() {
 
 templates() {
   cp -R more/git-hooks ~/.git-hooks
+
+  chmod +x ~/.git-hooks/*
 }
 
 terminal() {
-  [ `uname` != 'Linux' ] && open ./more/wbotelhos.terminal
+  [ `uname` != 'Linux' ] && open ./more/rafaeldev.terminal
 }
 
 ###################

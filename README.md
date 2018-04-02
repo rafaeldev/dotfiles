@@ -1,11 +1,11 @@
 # Dotfiles
 
-My personal settings including MacOSX Tweak.
+My personal settings copied frrom WBotelhos.
 
 ## Usage
 
 ``` shell
-git clone git@github.com:wbotelhos/dotfiles.git
+git clone git@github.com:rafaeldev/dotfiles.git
 ./dotfiles/install.sh
 ./dotfiles/macosx.sh
 ```
