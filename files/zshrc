@@ -1,0 +1,77 @@
+# ALIAS
+
+alias ...='cd ../..'
+alias ..='cd ..'
+alias .='cd .'
+alias cap='bundle exec cap'
+alias capfull='git push && git push --tags && bundle exec cap production deploy && cap production db:migrate && cap production db:seed'
+alias capush='git push && git push --tags && bundle exec cap production deploy'
+alias chrome='open /Applications/Google\ Chrome.app'
+alias cls='clear'
+alias dev='cd ~/Development'
+alias e="atom -nw"
+alias firefox='open /Applications/Firefox.app'
+alias flush_memcached="echo 'flush_all' | nc 127.0.0.1 11211"
+alias folders='ls -Gal | grep ^d'
+alias hclear='history -c'
+alias hide_files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+alias ip='curl ifconfig.me'
+alias kill='kill -9'
+alias killnautilus='killall -9 nautilus'
+alias killport='kill -9 $(lsof -i tcp:$1 -t)'
+alias la='ls -lah'
+alias ports='sudo lsof -i -n -P'
+alias psj='jps -l'
+alias psx='ps aux | grep'
+alias show_files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias speedup='sudo find /private/var/log/asl/* -mtime +5 -exec rm -rf {} \;'
+alias ss='open /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app'
+alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get clean'
+alias work='cd ~/workspace'
+
+## GIT
+
+alias describe='git describe'
+alias fetch='git fetch --all; git fetch --tag'
+alias ga='git add -A && git commit -m'
+alias gb='git branch'
+alias gc='git commit'
+alias gd='git difftool -y -x "sdiff" | less'
+alias gg='gitg &'
+alias gk='git checkout'
+alias gl="git log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan  )<%an>%Creset' --abbrev-commit"
+alias gm='git merge'
+alias gs='git status -sb'
+alias master='git checkout master'
+alias pop='git stash pop'
+alias pull='git pull'
+alias push='git push && git push --tags'
+alias rebase...='git rebase --continue'
+alias rebase='git add -A && git stash && git pull --rebase'
+alias remote='git config remote.origin.url'
+alias resetao='git reset --hard origin'
+alias stash='git add -A && git stash'
+
+## JS
+
+alias hbs='gulp templates'
+alias jasmine='node_modules/jasmine-node/bin/jasmine-node --forceexit'
+alias jasmine2='node_modules/jasmine-node/bin/jasmine-node --forceExit'
+
+## RUBY
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+alias cucumber='bundle exec cucumber'
+alias migrate='SKIP_DATA_MIGRATER=true rake db:migrate && SKIP_DATA_MIGRATER=true rake db:test:prepare'
+alias r='bundle exec rspec'
+alias rake='bundle exec rake'
+alias rc='rails c'
+alias rem_line_ssh='sed -i \\'\\' \\'$1\\' /Users/rafaeldev/.ssh/known_hosts'
+alias route='rake routes | grep'
+alias rr='BROWSER=chrome_headless bundle exec rspec'
+alias rs='rails s'
+alias rspec='bundle exec rspec'
+alias seed='SKIP_DATA_MIGRATER=true rake db:seed'
+alias spec='bundle exec rspec spec'
