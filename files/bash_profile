@@ -3,9 +3,11 @@
 export EDITOR=/usr/local/bin/atom
 export GIT_EDITOR=/usr/bin/vim
 
+export BUNDLE_GITHUB__COM=c3210779a2fc13502cf8691595bcfec034d7a10f:x-oauth-basic
+
 export GECKODRIVER_HOME=~/development
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-export M2_HOME=/usr/local/apache-maven
+export JAVA_HOME=/usr/lib/jvm/java-10-openjdk-amd64
+export M2_HOME=/home/kunta/bin/apache-maven-3.5.4
 export MONGO_HOME=/usr/local/mongodb
 export MYSQL_HOME=/usr/bin/mysql
 export NVM_DIR="${HOME}/.nvm"
@@ -14,10 +16,11 @@ export REDIS_HOME=/usr/local/redis
 export RVM_HOME=~/.rvm
 export TOMCAT_HOME=/usr/local/tomcat
 export LOCAL=~/.local
+export _USR=/usr
 export GPG_TTY="tty"
 export DOCKERID="rafaeldev"
 
-export PATH=${PATH}:${GECKODRIVER_HOME}:${JAVA_HOME}/bin:${MONGO_HOME}/bin:${MYSQL_HOME}/bin:${REDIS_HOME}/src:${TOMCAT_HOME}/bin:${RVM_HOME}/bin:${POSTGRES_HOME}/bin:${M2_HOME}/bin:${LOCAL}/bin
+export PATH=${PATH}:${GECKODRIVER_HOME}:${JAVA_HOME}/bin:${MONGO_HOME}/bin:${MYSQL_HOME}/bin:${REDIS_HOME}/src:${TOMCAT_HOME}/bin:${RVM_HOME}/bin:${POSTGRES_HOME}/bin:${M2_HOME}/bin:${LOCAL}/bin:${_USR}/bin
 
 # ALIAS
 
@@ -95,6 +98,8 @@ alias route='rake routes | grep'
 alias rs='rails s'
 alias rspec='bundle exec rspec'
 alias seed='SKIP_DATA_MIGRATER=true rake db:seed'
+alias srs='bundle exec spring rspec'
+alias sr='bundle exec spring rspec'
 alias spec='bundle exec rspec spec'
 
 # # JOB
@@ -143,13 +148,13 @@ go() {
   cd ~/workspace/${1}
 }
 
-guard() {
-  if [ ! -z "${1}" ]; then
-    cd ~/workspace/${1}
-  fi
-
-  bundle exec guard
-}
+# guard() {
+#   if [ ! -z "${1}" ]; then
+#     cd ~/workspace/${1}
+#   fi
+#
+#   bundle exec guard
+# }
 
 keygen() {
   KEY_PATH=~/.ssh/"${1}"
