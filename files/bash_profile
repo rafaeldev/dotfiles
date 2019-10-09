@@ -118,6 +118,10 @@ source "$NVM_DIR/nvm.sh"
 #
 # source ~/.bash_profile_complements
 
+awsuser() {
+  export AWS_PROFILE=${1}
+}
+
 # PROMPT
 
 prompt() {
