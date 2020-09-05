@@ -43,28 +43,10 @@ job() {
   cp more/job ~/.job
 }
 
-linking() {
-  if [ "$(uname)" == 'Linux' ]; then
-    ENTRY='source ~/.bash_profile'
-    FILE=~/.bashrc
-    RESULT=$(grep "${ENTRY}" $FILE)
-
-    [ "$RESULT" == '' ] && echo $ENTRY >> $FILE
-  fi
-}
-
-reload() {
-  . ~/.bash_profile
-}
-
 templates() {
   cp -R more/git-hooks ~/.git-hooks
 
   chmod +x ~/.git-hooks/*
-}
-
-terminal() {
-  [ `uname` != 'Linux' ] && open ./more/rafaeldev.terminal
 }
 
 ###################
@@ -76,9 +58,6 @@ begin
 dotfiles
 config
 templates
-terminal
-linking
 job
-reload
 
 end
